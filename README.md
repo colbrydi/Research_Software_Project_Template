@@ -2,14 +2,14 @@
 
 Starter repository for research teams and students who are new to software engineering.
 
-## Overview of This File
+## Overview of This Repository
 
 - Purpose: Explain how to use the template with minimal overhead.
 - Used by: Students, instructors, and collaborators onboarding to the project.
 - Adds: A simple starting path plus optional tool adoption.
 - Learn more: https://swcarpentry.github.io/
 
-This template is designed to make your first research code repository:
+This template is designed to help make your first research code repository:
 
 - Safe: simple checks catch common mistakes early.
 - Portable: works across machines using a pinned conda environment.
@@ -36,7 +36,7 @@ This template is designed to make your first research code repository:
 
 	- [local_import_demo.ipynb](local_import_demo.ipynb)
 
-## What To Edit First
+## What to Edit First
 
 1. Rename `mypackage` to your project package name.
 2. Replace [mypackage/example.py](mypackage/example.py) with your own module(s).
@@ -69,7 +69,7 @@ More unit testing tutorials:
 
 Use the tools you need, when you need them.
 
-### Quick Definitions For Beginners
+### Quick Definitions for Beginners
 
 - Environment: A self-contained software workspace with a specific Python version and package list. It helps everyone run the same code with fewer "it works on my machine" problems.
 - Unit test: A small automatic check for one behavior in your code.
@@ -115,7 +115,7 @@ Publishing tutorial:
 - pdoc docs: https://pdoc.dev/docs/pdoc.html
 - GitHub Pages docs: https://docs.github.com/pages/getting-started-with-github-pages/creating-a-github-pages-site
 
-To enable automatic publication, set GitHub Pages Source to GitHub Actions in repository settings.
+To enable automatic publication, set GitHub Pages source to GitHub Actions in repository settings.
 
 ## Typical Workflow
 
@@ -167,7 +167,7 @@ Progressive unlock option:
 - Add optional tools only after your team sees recurring problems they can solve.
 - Prefer consistency over complexity. A small workflow used every week is better than a large workflow used rarely.
 
-## Notes For Reproducibility
+## Notes for Reproducibility
 
 - Keep `environment.yml` updated as tooling needs evolve.
 - Add random seeds for stochastic experiments.
