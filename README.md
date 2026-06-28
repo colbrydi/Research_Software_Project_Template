@@ -86,9 +86,13 @@ Use the tools you need, when you need them.
 | Ruff | Finds common bugs/style issues quickly (linting). | `make lint` | [pyproject.toml](pyproject.toml) | https://docs.astral.sh/ruff/tutorial/ |
 | MyPy | Checks type hints for mismatches before runtime errors occur. | `make type` | [pyproject.toml](pyproject.toml) | https://mypy.readthedocs.io/en/stable/getting_started.html |
 | Pydocstyle | Checks whether docstrings follow a consistent style. | `make doclint` | [makefile](makefile) | https://www.pydocstyle.org/en/stable/ |
+| pip-audit | Checks dependencies for known security vulnerabilities. | `make audit` | [makefile](makefile), [environment.yml](environment.yml) | https://pypi.org/project/pip-audit/ |
+| detect-secrets | Scans code for accidentally committed secrets. | `make secrets` | [.pre-commit-config.yaml](.pre-commit-config.yaml), [.secrets.baseline](.secrets.baseline) | https://github.com/Yelp/detect-secrets |
+| nbstripout | Removes notebook output and noisy metadata before commit. | `make nb-clean` | [.pre-commit-config.yaml](.pre-commit-config.yaml) | https://github.com/kynan/nbstripout |
 | Pdoc | Builds simple API documentation pages from docstrings. | `make docs` | [makefile](makefile) | https://pdoc.dev/docs/pdoc.html |
 | Pre-commit | Runs chosen checks before commit so issues are caught early. | `conda run --prefix ./envs pre-commit run --all-files` | [.pre-commit-config.yaml](.pre-commit-config.yaml) | https://pre-commit.com/ |
-| GitHub Actions | Runs checks in the cloud after push/pull request (CI). | Automatic on GitHub | [.github/workflows/ci.yml](.github/workflows/ci.yml) | https://docs.github.com/actions/quickstart |
+| GitHub Actions | Runs checks in the cloud after push/pull request (CI), including Python 3.11 and 3.12 matrix testing. | Automatic on GitHub | [.github/workflows/ci.yml](.github/workflows/ci.yml) | https://docs.github.com/actions/quickstart |
+| Dependabot | Opens scheduled dependency update PRs for GitHub Actions and Python metadata. | Automatic on GitHub | [.github/dependabot.yml](.github/dependabot.yml) | https://docs.github.com/code-security/dependabot |
 | JupyterLab | Lets you run notebook cells interactively for exploration and demos. | `conda run --prefix ./envs jupyter lab` | [local_import_demo.ipynb](local_import_demo.ipynb) | https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html |
 
 ## API Docs Quick Start (pdoc)
@@ -126,6 +130,8 @@ make test         # optional
 make format
 make lint
 make type
+make audit
+make secrets
 make check-full
 ```
 

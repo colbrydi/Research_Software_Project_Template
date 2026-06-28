@@ -14,6 +14,10 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
 
     steps:
       - name: Check out repository
@@ -22,6 +26,7 @@ jobs:
       - name: Set up conda environment
         uses: conda-incubator/setup-miniconda@v3
         with:
+          python-version: ${{ matrix.python-version }}
           activate-environment: scientific-software-template
           environment-file: environment.yml
           auto-activate-base: false
@@ -35,3 +40,5 @@ jobs:
           # make lint
           # make type
           # make doclint
+          # make audit
+          # make secrets

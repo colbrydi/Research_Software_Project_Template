@@ -20,6 +20,9 @@ help:
 	@echo "  make lint          Run ruff"
 	@echo "  make type          Run mypy"
 	@echo "  make doclint       Run pydocstyle"
+	@echo "  make audit         Run dependency vulnerability scan"
+	@echo "  make secrets       Run secret scan (working tree)"
+	@echo "  make nb-clean      Strip notebook outputs/metadata"
 	@echo "  make check-full    Run full quality suite"
 	@echo ""
 	@echo "Docs"
@@ -40,6 +43,16 @@ type:
 
 doclint:
 	$(CONDA_RUN) pydocstyle $(MODULENAME)
+
+audit:
+	$(CONDA_RUN) pip-audit
+
+secrets:
+	$(CONDA_RUN) pre-commit run detect-secrets --all-files
+
+nb-clean:
+	$(CONDA_RUN) nbstripout --install
+	find . -name "*.ipynb" -not -path "./envs/*" -print0 | xargs -0 -r $(CONDA_RUN) nbstripout
 
 test:
 	$(CONDA_RUN) pytest -v --cov=$(MODULENAME) --cov-report=term-missing $(MODULENAME)/tests
