@@ -1,0 +1,37 @@
+# Overview:
+# - Purpose: Run the minimum required automated checks on every push/PR.
+# - Used by: GitHub Actions.
+# - Adds: Early warning when tests fail on a clean machine.
+# - Learn more: https://docs.github.com/actions/quickstart
+name: CI
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up conda environment
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          activate-environment: scientific-software-template
+          environment-file: environment.yml
+          auto-activate-base: false
+
+      - name: Run required beginner checks
+        shell: bash -l {0}
+        run: |
+          make test
+          # Optional checks for advanced students.
+          # Uncomment these lines when your class is ready.
+          # make lint
+          # make type
+          # make doclint

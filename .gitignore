@@ -1,3 +1,9 @@
+# Overview:
+# - Purpose: Ignore generated or machine-specific files.
+# - Used by: Git when determining what should be committed.
+# - Adds: Cleaner history and fewer accidental commits.
+# - Learn more: https://git-scm.com/docs/gitignore
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -104,11 +110,15 @@ celerybeat.pid
 # Environments
 .env
 .venv
+envs/
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
+
+# Generated API docs
+docs/
 
 # Spyder project settings
 .spyderproject

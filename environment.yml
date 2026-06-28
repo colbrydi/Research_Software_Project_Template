@@ -1,11 +1,24 @@
-name: CMSE802_Project_Template
+# Overview:
+# - Purpose: Single conda environment with testing, docs, and optional quality tools.
+# - Used by: `make init` and GitHub Actions setup.
+# - Adds: One-file setup for a complete and reproducible starter toolchain.
+# - Learn more: https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
+name: scientific-software-template
 channels:
+  - conda-forge
   - defaults
 dependencies:
-  - pdoc3
-  - pip
-  - pytest
-  - pydocstyle
-  - pylint
+  - python>=3.11,<3.13  # Core runtime (required)
+  - pip  # Core package installer (required)
+  - pytest  # Optional: unit testing tool
+  - pytest-cov  # Optional: test coverage reporting
+  - black  # Optional: automatic code formatting
+  - ruff  # Optional: linting and style checks
+  - mypy  # Optional: static type checking
+  - pydocstyle  # Optional: docstring style checks
+  - pre-commit  # Optional: run checks automatically before commit
+  - pdoc  # Optional: build API docs from docstrings
+  - ipykernel  # Optional: Python kernel support for notebooks
+  - jupyterlab  # Optional: notebook/lab interface
 prefix: ./envs
 

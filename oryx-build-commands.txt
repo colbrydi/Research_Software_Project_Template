@@ -1,0 +1,7 @@
+# Overview:
+# - Purpose: Declare cloud build steps for platforms using Oryx.
+# - Used by: Oryx-based deployment/build systems.
+# - Adds: Reproducible environment creation in hosted builds.
+# - Learn more: https://github.com/microsoft/Oryx
+PlatformWithVersion=Python 
+BuildCommands=conda env create --file environment.yml --prefix ./envs --quiet

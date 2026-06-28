@@ -1,36 +1,59 @@
-MODULENAME = mypackage 
+# Overview:
+# - Purpose: Define simple, repeatable project commands.
+# - Used by: The `make` command run by students and CI.
+# - Adds: One-command workflows for setup, testing, and optional tooling.
+# - Learn more: https://www.gnu.org/software/make/manual/make.html#Introduction
+MODULENAME ?= mypackage
+ENV_PREFIX ?= ./envs
+CONDA_RUN = conda run --prefix $(ENV_PREFIX)
 
 help:
 	@echo ""
-	@echo "Welcome to Simple Evolutionary Exploration!"
-	@echo "To get started create an environment using:"
-	@echo "	make init"
-	@echo "	conda activate ./envs"
+	@echo "Scientific software helper targets"
 	@echo ""
-	@echo "To generate project documentation use:"
-	@echo "	make doc"
+	@echo "Bootstrap"
+	@echo "  make init          Create/update environment at $(ENV_PREFIX)"
 	@echo ""
-	@echo "To Lint the project use:"
-	@echo "	make lint"
+	@echo "Quality"
+	@echo "  make test          Run pytest with coverage"
+	@echo "  make format        Run black"
+	@echo "  make lint          Run ruff"
+	@echo "  make type          Run mypy"
+	@echo "  make doclint       Run pydocstyle"
+	@echo "  make check-full    Run full quality suite"
 	@echo ""
-	@echo "To run unit tests use:"
-	@echo "	make test"
+	@echo "Docs"
+	@echo "  make docs          Build API docs in ./docs"
 	@echo ""
-	
 
 init:
-	conda env create --prefix ./envs --file environment.yml
+	conda env create --prefix $(ENV_PREFIX) --file environment.yml || conda env update --prefix $(ENV_PREFIX) --file environment.yml --prune
 
-docs:
-	pdoc3 --force --html --output-dir ./docs $(MODULENAME)
+format:
+	$(CONDA_RUN) black $(MODULENAME)
 
 lint:
-	pylint $(MODULENAME) 
+	$(CONDA_RUN) ruff check $(MODULENAME)
+
+type:
+	$(CONDA_RUN) mypy $(MODULENAME)
 
 doclint:
-	pydocstyle $(MODULENAME)
+	$(CONDA_RUN) pydocstyle $(MODULENAME)
 
 test:
-	pytest -v $(MODULENAME) 
+	$(CONDA_RUN) pytest -v --cov=$(MODULENAME) --cov-report=term-missing $(MODULENAME)/tests
 
-.PHONY: init doc lint test 
+docs:
+	rm -rf docs
+	$(CONDA_RUN) pdoc --docformat google -o docs $(MODULENAME)
+
+check-full: lint type doclint test
+
+check: test
+
+clean:
+	rm -rf .pytest_cache .mypy_cache .ruff_cache .coverage htmlcov docs
+	find . -type d -name __pycache__ -exec rm -rf {} +
+
+.PHONY: help init format lint type doclint test docs check-full check clean
