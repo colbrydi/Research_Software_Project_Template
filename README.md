@@ -173,4 +173,23 @@ Progressive unlock option:
 - Add random seeds for stochastic experiments.
 - Record key parameters and software versions in outputs.
 - Avoid hidden local state and relative paths outside repo root.
+- Prefer relative paths in code and notebooks (avoid machine-specific absolute paths).
+- Avoid hard-coded algorithm settings when possible; use function arguments and sensible defaults.
+
+## Repository Habits (Consistency Add-On)
+
+These are selected practices aligned with the course-level repository rules:
+
+- Keep repositories text-first when possible: code, Markdown, and config files are preferred over frequently changing binary files.
+- Use `.gitignore` intentionally and review what is staged before each commit.
+- Avoid storing raw/input/intermediate/output datasets directly in the code repository; document how to fetch or mount data instead.
+- Keep interfaces layered: library/API first, command-line tools second, and GUI work last.
+- Favor modular design and avoid copy/paste duplication across code and docs.
+- Keep README as the onboarding entry point: install, run, and validate in as few steps as possible.
+- For notebooks, include a top Markdown title/description cell and clear outputs before commit when practical.
+- If AI/LLM tools contribute meaningfully, note usage briefly in commit messages (for example: `LLM: drafted initial test cases, then simplified manually`).
+
+Full reference:
+
+- [Rules for Repos](https://colbrydi.github.io/Research_guidelines/Rules_for_Repos.html)
 
