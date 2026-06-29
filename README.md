@@ -32,9 +32,9 @@ This template is designed to help make your first research code repository:
 	make test
 	```
 
-3. Open the local import notebook example:
+3. Open the starter notebook:
 
-	- [local_import_demo.ipynb](local_import_demo.ipynb)
+	- [00_START_HERE.ipynb](00_START_HERE.ipynb)
 
 ## What to Edit First
 
@@ -93,7 +93,7 @@ Use the tools you need, when you need them.
 | Pre-commit | Runs chosen checks before commit so issues are caught early. | `conda run --prefix ./envs pre-commit run --all-files` | [.pre-commit-config.yaml](.pre-commit-config.yaml) | https://pre-commit.com/ |
 | GitHub Actions | Runs checks in the cloud after push/pull request (CI), including Python 3.11 and 3.12 matrix testing. | Automatic on GitHub | [.github/workflows/ci.yml](.github/workflows/ci.yml) | https://docs.github.com/actions/quickstart |
 | Dependabot | Opens scheduled dependency update PRs for GitHub Actions and Python metadata. | Automatic on GitHub | [.github/dependabot.yml](.github/dependabot.yml) | https://docs.github.com/code-security/dependabot |
-| JupyterLab | Lets you run notebook cells interactively for exploration and demos. | `conda run --prefix ./envs jupyter lab` | [local_import_demo.ipynb](local_import_demo.ipynb) | https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html |
+| JupyterLab | Lets you run notebook cells interactively for exploration and demos. | `conda run --prefix ./envs jupyter lab` | [00_START_HERE.ipynb](00_START_HERE.ipynb) | https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html |
 
 ## API Docs Quick Start (pdoc)
 
