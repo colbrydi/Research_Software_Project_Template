@@ -1,3 +1,9 @@
+# Overview:
+# - Purpose: Configure automatic dependency update pull requests.
+# - Used by: GitHub Dependabot.
+# - Adds: Low-effort dependency maintenance for workflows and Python metadata.
+# - Can I delete this?: Yes, if your course does not want automated dependency PRs.
+# - Learn more: https://docs.github.com/code-security/dependabot
 version: 2
 updates:
   - package-ecosystem: "github-actions"

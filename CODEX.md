@@ -2,6 +2,10 @@
 
 Note: This adapter helps us "talk" to OpenAI Codex (https://openai.com/codex/) in a way that supports consistent, educational guidance.
 
+Can I delete this?
+- Optional.
+- Keep if your team uses Codex and wants zero-setup repository-specific guidance.
+
 Use `RESEARCH_SOFTWARE_AI_POLICY.md` as canonical policy.
 Use `AGENTS.md` for operational workflow.
 

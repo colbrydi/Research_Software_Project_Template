@@ -2,6 +2,10 @@
 
 This file is a lightweight adapter for GitHub Copilot.
 
+Can I delete this?
+- Keep if your team uses GitHub Copilot.
+- Optional if your team does not use Copilot and does not need Copilot-specific behavior.
+
 Note: This adapter helps us "talk" to GitHub Copilot (https://github.com/features/copilot) in a way that supports consistent, educational guidance.
 
 For Copilot-specific behavior in this repository:

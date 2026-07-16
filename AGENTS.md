@@ -2,6 +2,10 @@
 
 This file defines repository-specific execution behavior for coding agents.
 
+Can I delete this?
+- Keep if you use coding agents.
+- If removed, preserve equivalent workflow guidance in another clearly discoverable file.
+
 Canonical philosophy, policy, and governance live in `RESEARCH_SOFTWARE_AI_POLICY.md`.
 
 ## Defaults

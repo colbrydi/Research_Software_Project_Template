@@ -17,11 +17,12 @@ dependencies:
   - mypy  # Optional: static type checking
   - pydocstyle  # Optional: docstring style checks
   - pip-audit  # Optional: dependency vulnerability scanning
-  - detect-secrets  # Optional: secret scanning for commits/CI
   - nbstripout  # Optional: strip notebook outputs before commit
   - pre-commit  # Optional: run checks automatically before commit
   - pdoc  # Optional: build API docs from docstrings
   - ipykernel  # Optional: Python kernel support for notebooks
   - jupyterlab  # Optional: notebook/lab interface
+  - pip:
+      - detect-secrets  # Optional: secret scanning for commits/CI
 prefix: ./envs
 

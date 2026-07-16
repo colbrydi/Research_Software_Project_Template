@@ -18,6 +18,13 @@ This template is designed to help make your first research code repository:
 - Literate: optional API docs and notebooks for explainable workflows.
 - Low overhead: use only the tools that fit your current needs.
 
+### Keep or Remove Files?
+
+Use [TEMPLATE_FILE_GUIDE.md](TEMPLATE_FILE_GUIDE.md) for a file-by-file checklist that explains:
+- why each file exists
+- whether it is safe to delete
+- when to keep optional automation and adapter files
+
 ## AI Guidance Files
 
 This template includes a layered AI guidance system designed to work across multiple AI tools.
