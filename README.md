@@ -18,6 +18,44 @@ This template is designed to help make your first research code repository:
 - Literate: optional API docs and notebooks for explainable workflows.
 - Low overhead: use only the tools that fit your current needs.
 
+## AI Guidance Files
+
+This template includes a layered AI guidance system designed to work across multiple AI tools.
+
+- Canonical philosophy and policy: [RESEARCH_SOFTWARE_AI_POLICY.md](RESEARCH_SOFTWARE_AI_POLICY.md)
+- Operational coding-agent behavior: [AGENTS.md](AGENTS.md)
+- GitHub Copilot adapter: [.github/copilot-instructions.md](.github/copilot-instructions.md)
+- Active adapters: [.cursorrules](.cursorrules), [CLAUDE.md](CLAUDE.md), [CODEX.md](CODEX.md), [GEMINI.md](GEMINI.md)
+
+Design intent:
+
+- Keep AI guidance portable across tools and future platforms.
+- Minimize duplication by keeping policy in one canonical document.
+- Keep tool-specific files short and focused on tool mechanics.
+- Add tool-specific adapter files only when a tool requires a dedicated filename or location.
+- Keep active discovery files where tools expect them so students get zero-setup behavior.
+
+## Why These AI Files Exist
+
+Some files in this repository may look unusual (for example, [AGENTS.md](AGENTS.md), [.cursorrules](.cursorrules), [CLAUDE.md](CLAUDE.md), [CODEX.md](CODEX.md), and [GEMINI.md](GEMINI.md)).
+
+They are included to make AI-assisted work more educational and more consistent across different tools.
+
+What this means in practice:
+
+- Students can choose different AI tools and still get aligned guidance.
+- Instructors and collaborators can expect similar quality standards across tools.
+- The repository keeps one policy source, so updates are easier to maintain.
+
+How the files are organized:
+
+- Policy source of truth: [RESEARCH_SOFTWARE_AI_POLICY.md](RESEARCH_SOFTWARE_AI_POLICY.md)
+- Operational behavior for coding agents: [AGENTS.md](AGENTS.md)
+- Tool discovery files in expected locations for zero setup
+
+
+This structure is intentional: it supports learning, reproducibility, and responsible AI use while still keeping AI workflows practical and productive.
+
 ## Quick Start
 
 1. Create the environment:

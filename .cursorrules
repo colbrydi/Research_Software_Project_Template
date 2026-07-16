@@ -1,0 +1,10 @@
+# Cursor Adapter
+
+Note: This adapter helps us "talk" to Cursor (https://cursor.com/) in a way that supports consistent, educational guidance.
+
+Use `RESEARCH_SOFTWARE_AI_POLICY.md` as canonical policy.
+Use `AGENTS.md` for operational workflow.
+
+- Prefer existing repository tools and workflows.
+- Keep edits minimal and aligned with project structure.
+- Add tests or validation when behavior changes.
