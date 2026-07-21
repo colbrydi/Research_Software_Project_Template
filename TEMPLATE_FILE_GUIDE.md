@@ -14,7 +14,7 @@ Decision labels:
 |---|---|---|
 | README.md | Main onboarding instructions and workflow overview. | Modify (replace for your project) |
 | environment.yml | Reproducible conda environment setup. | Keep if using conda |
-| makefile | Simple common commands for setup, test, lint, docs. | Keep |
+| makefile | Optional reference workflow with simple common commands for setup, test, lint, and docs. | Optional (or keep if your team uses `make`) |
 | pyproject.toml | Central tool configuration (pytest, black, ruff, mypy). | Keep |
 | mypackage/ | Starter Python package structure. | Modify (rename package and update modules) |
 | mypackage/tests/ | Starter tests and testing patterns. | Modify (replace starter tests with project tests) |
@@ -31,7 +31,6 @@ Decision labels:
 | .github/copilot-instructions.md | GitHub Copilot-specific adapter file in expected location. | Keep if using Copilot |
 | .cursorrules | Cursor adapter in expected discovery filename. | Keep if using Cursor |
 | CLAUDE.md | Claude adapter. | Keep if using Claude |
-| CODEX.md | Codex adapter. | Keep if using Codex |
 | GEMINI.md | Gemini adapter. | Keep if using Gemini |
 
 ## Git/Automation Files
@@ -52,7 +51,7 @@ Decision labels:
 If your class wants the smallest practical setup, keep these and remove the rest later as needed:
 - README.md (modify immediately)
 - environment.yml
-- makefile
+- makefile (if your class uses `make`)
 - pyproject.toml
 - LICENSE (modify if needed)
 - mypackage/ (rename and modify)

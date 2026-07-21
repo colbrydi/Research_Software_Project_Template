@@ -32,7 +32,7 @@ This template includes a layered AI guidance system designed to work across mult
 - Canonical philosophy and policy: [RESEARCH_SOFTWARE_AI_POLICY.md](RESEARCH_SOFTWARE_AI_POLICY.md)
 - Operational coding-agent behavior: [AGENTS.md](AGENTS.md)
 - GitHub Copilot adapter: [.github/copilot-instructions.md](.github/copilot-instructions.md)
-- Active adapters: [.cursorrules](.cursorrules), [CLAUDE.md](CLAUDE.md), [CODEX.md](CODEX.md), [GEMINI.md](GEMINI.md)
+- Active adapters: [.cursorrules](.cursorrules), [CLAUDE.md](CLAUDE.md), [GEMINI.md](GEMINI.md)
 
 Design intent:
 
@@ -44,7 +44,7 @@ Design intent:
 
 ## Why These AI Files Exist
 
-Some files in this repository may look unusual (for example, [AGENTS.md](AGENTS.md), [.cursorrules](.cursorrules), [CLAUDE.md](CLAUDE.md), [CODEX.md](CODEX.md), and [GEMINI.md](GEMINI.md)).
+Some files in this repository may look unusual (for example, [AGENTS.md](AGENTS.md), [.cursorrules](.cursorrules), [CLAUDE.md](CLAUDE.md), and [GEMINI.md](GEMINI.md)).
 
 They are included to make AI-assisted work more educational and more consistent across different tools.
 
@@ -64,6 +64,14 @@ How the files are organized:
 This structure is intentional: it supports learning, reproducibility, and responsible AI use while still keeping AI workflows practical and productive.
 
 ## Quick Start
+
+The `make` commands below are an optional convenience layer: they show one repeatable way to run common tasks. You can always run the underlying commands directly.
+
+On Windows, `make` is not included by default. If your course or project wants to use these commands, installing `m2-base` in the Conda environment often supplies it:
+
+```bash
+conda install m2-base
+```
 
 1. Create the environment:
 
@@ -243,4 +251,3 @@ These are selected practices aligned with the course-level repository rules:
 Full reference:
 
 - [Rules for Repos](https://colbrydi.github.io/Research_guidelines/Rules_for_Repos.html)
-

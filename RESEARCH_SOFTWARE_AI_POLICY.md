@@ -146,7 +146,6 @@ Current adapter locations in this repository:
 - `.github/copilot-instructions.md`
 - `.cursorrules`
 - `CLAUDE.md`
-- `CODEX.md`
 - `GEMINI.md`
 
 Not all tools reliably discover adapter files from subfolders. Keep active files in discovery-compatible locations.
