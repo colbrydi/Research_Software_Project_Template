@@ -2,96 +2,75 @@
 
 Starter repository for research teams and students who are new to software engineering.
 
-## Overview of This Repository
-
-- Purpose: Explain how to use the template with minimal overhead.
-- Used by: Students, instructors, and collaborators onboarding to the project.
-- Adds: A simple starting path plus optional tool adoption.
-- Learn more: https://swcarpentry.github.io/
-
-This template is designed to help make your first research code repository:
+This template helps you create a research-code repository that is:
 
 - Safe: simple checks catch common mistakes early.
-- Portable: works across machines using a pinned conda environment.
-- Reproducible: explicit dependencies and deterministic commands.
+- Portable: uses a shared Conda environment where practical.
+- Reproducible: records dependencies and repeatable commands.
 - Robust: tests first, then optional quality tools as you grow.
 - Literate: optional API docs and notebooks for explainable workflows.
 - Low overhead: use only the tools that fit your current needs.
 
-### Keep or Remove Files?
+## Create Your Project Repository on GitHub
 
-Use [TEMPLATE_FILE_GUIDE.md](TEMPLATE_FILE_GUIDE.md) for a file-by-file checklist that explains:
-- why each file exists
-- whether it is safe to delete
-- when to keep optional automation and adapter files
+Start a new project from this template; do not fork it or work directly in the template repository. A repository created from a template is your own independent project, with its own commits and history.
 
-## AI Guidance Files
+1. On the GitHub page for this template, select **Use this template**, then **Create a new repository**.
+2. Choose the account or organization that should own the project.
+3. Give the repository a clear name, such as `soil-analysis`, add a short description, and choose the visibility appropriate for your project and data-sharing requirements.
+4. Select **Create repository from template**.
+5. Clone your new repository to your computer using GitHub Desktop or the repository's **Code** button. From a terminal, the pattern is:
 
-This template includes a layered AI guidance system designed to work across multiple AI tools.
+   ```bash
+   git clone https://github.com/YOUR-ACCOUNT/YOUR-REPOSITORY.git
+   cd YOUR-REPOSITORY
+   ```
 
-- Canonical philosophy and policy: [RESEARCH_SOFTWARE_AI_POLICY.md](RESEARCH_SOFTWARE_AI_POLICY.md)
-- Operational coding-agent behavior: [AGENTS.md](AGENTS.md)
-- GitHub Copilot adapter: [.github/copilot-instructions.md](.github/copilot-instructions.md)
-- Active adapters: [.cursorrules](.cursorrules), [CLAUDE.md](CLAUDE.md), [GEMINI.md](GEMINI.md)
+If you do not see **Use this template**, ask the instructor or repository owner to enable the repository's template setting. GitHub's [guide to creating a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) includes screenshots and current interface details.
 
-Design intent:
+## Start Here
 
-- Keep AI guidance portable across tools and future platforms.
-- Minimize duplication by keeping policy in one canonical document.
-- Keep tool-specific files short and focused on tool mechanics.
-- Add tool-specific adapter files only when a tool requires a dedicated filename or location.
-- Keep active discovery files where tools expect them so students get zero-setup behavior.
+Follow these steps in order. You do not need to read every file in this repository.
 
-## Why These AI Files Exist
+1. Choose a project/package name and follow the [rename `mypackage` guide](TEMPLATE_FILE_GUIDE.md#rename-mypackage-your-first-customization). For example, `soil_analysis` is a clearer name than the starter name `mypackage`.
+2. Create the environment if you want to use the provided Conda and Make workflow:
 
-Some files in this repository may look unusual (for example, [AGENTS.md](AGENTS.md), [.cursorrules](.cursorrules), [CLAUDE.md](CLAUDE.md), and [GEMINI.md](GEMINI.md)).
+   ```bash
+   make init
+   ```
 
-They are included to make AI-assisted work more educational and more consistent across different tools.
+   The `make` commands are optional convenience commands; you can run the underlying tools directly instead. On Windows, `make` is not included by default. Installing `m2-base` in Conda often supplies it:
 
-What this means in practice:
+   ```bash
+   conda install m2-base
+   ```
 
-- Students can choose different AI tools and still get aligned guidance.
-- Instructors and collaborators can expect similar quality standards across tools.
-- The repository keeps one policy source, so updates are easier to maintain.
+3. Try the starter test when you are ready:
 
-How the files are organized:
+   ```bash
+   make test
+   ```
 
-- Policy source of truth: [RESEARCH_SOFTWARE_AI_POLICY.md](RESEARCH_SOFTWARE_AI_POLICY.md)
-- Operational behavior for coding agents: [AGENTS.md](AGENTS.md)
-- Tool discovery files in expected locations for zero setup
+4. Open [00_START_HERE.ipynb](00_START_HERE.ipynb) if you prefer a guided notebook walkthrough.
 
+## Where to Go Next
 
-This structure is intentional: it supports learning, reproducibility, and responsible AI use while still keeping AI workflows practical and productive.
+Use this README as your home base. Open another document only when it matches your current task.
 
-## Quick Start
+| If you want to… | Go to… |
+|---|---|
+| Rename the starter package, understand a file, or decide whether to remove one | [Template File Guide](TEMPLATE_FILE_GUIDE.md) |
+| Write your first function and test | [What to Edit First](#what-to-edit-first) below |
+| Learn about or enable a tool | [Tool Overview](#tool-overview) below |
+| Use AI responsibly with code or research materials | [Research Software AI Policy](RESEARCH_SOFTWARE_AI_POLICY.md) |
+| Share work through GitHub or pull requests | [Sharing Changes](#sharing-changes-optional) below |
+| Publish API documentation | [API Docs Quick Start](#api-docs-quick-start-pdoc) below |
 
-The `make` commands below are an optional convenience layer: they show one repeatable way to run common tasks. You can always run the underlying commands directly.
-
-On Windows, `make` is not included by default. If your course or project wants to use these commands, installing `m2-base` in the Conda environment often supplies it:
-
-```bash
-conda install m2-base
-```
-
-1. Create the environment:
-
-	```bash
-	make init
-	```
-
-2. Try the test command (optional):
-
-	```bash
-	make test
-	```
-
-3. Open the starter notebook:
-
-	- [00_START_HERE.ipynb](00_START_HERE.ipynb)
+The AI configuration files (`AGENTS.md`, `.cursorrules`, `CLAUDE.md`, `GEMINI.md`, and GitHub's Copilot instructions) work in the background for the tools that use them. Students do not need to read or edit them to start a project. If you use AI, read the policy linked above before sharing research materials with an external tool.
 
 ## What to Edit First
 
-1. Rename `mypackage` to your project package name.
+1. Follow the [rename `mypackage` guide](TEMPLATE_FILE_GUIDE.md#rename-mypackage-your-first-customization) to choose and configure your project package name.
 2. Replace [mypackage/example.py](mypackage/example.py) with your own module(s).
 3. Update tests in [mypackage/tests/test_pytest.py](mypackage/tests/test_pytest.py).
 4. Update this README with project goals, install instructions, and examples.

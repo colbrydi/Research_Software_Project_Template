@@ -1,6 +1,6 @@
 # Template File Guide
 
-This guide explains why each template file exists and whether it can be removed.
+Start with [README.md](README.md). Use this guide only when you are customizing the template, wondering what a file does, or deciding whether to remove one.
 
 Decision labels:
 - Keep: recommended for most student projects.
