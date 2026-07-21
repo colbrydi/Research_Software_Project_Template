@@ -6,7 +6,7 @@ Can I delete this?
 - Optional.
 - Keep if your team uses Cursor and wants zero-setup repository-specific guidance.
 
-Use `RESEARCH_SOFTWARE_AI_POLICY.md` as canonical policy.
+Use `guides/ai-policy.md` as canonical policy.
 Use `AGENTS.md` for operational workflow.
 
 - Prefer existing repository tools and workflows.

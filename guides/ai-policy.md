@@ -118,7 +118,7 @@ Before accepting generated code, analysis, or documentation:
 
 Use a layered structure to minimize duplication:
 
-- Philosophy and policy: `RESEARCH_SOFTWARE_AI_POLICY.md` (this file, canonical)
+- Philosophy and policy: `guides/ai-policy.md` (this file, canonical)
 - Operational agent behavior: `AGENTS.md`
 - Tool-specific adapter(s): `.github/copilot-instructions.md` and future tool adapters
 
@@ -131,7 +131,7 @@ Default stance: do not create per-tool policy files unless a tool requires a spe
 When a tool-specific file is needed:
 
 1. Keep it short.
-2. Point to `RESEARCH_SOFTWARE_AI_POLICY.md`.
+2. Point to `guides/ai-policy.md`.
 3. Add only tool mechanics and repository integration details.
 4. Do not duplicate philosophy, compliance policy, or role definitions.
 

@@ -15,6 +15,6 @@ For Copilot-specific behavior in this repository:
 - When generating code, include tests or validation steps when practical.
 - When suggesting risky operations, explain risk and safer alternatives.
 
-Follow `RESEARCH_SOFTWARE_AI_POLICY.md` as the canonical source for repository AI philosophy, policy, and quality expectations.
+Follow `guides/ai-policy.md` as the canonical source for repository AI philosophy, policy, and quality expectations.
 
-Do not duplicate or fork policy from `RESEARCH_SOFTWARE_AI_POLICY.md`; update that file instead.
+Do not duplicate or fork policy from `guides/ai-policy.md`; update that file instead.

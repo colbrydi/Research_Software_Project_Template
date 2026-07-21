@@ -32,7 +32,7 @@ If you do not see **Use this template**, ask the instructor or repository owner 
 
 Follow these steps in order. You do not need to read every file in this repository.
 
-1. Choose a project/package name and follow the [rename `mypackage` guide](TEMPLATE_FILE_GUIDE.md#rename-mypackage-your-first-customization). For example, `soil_analysis` is a clearer name than the starter name `mypackage`.
+1. Choose a project/package name and follow the [rename `mypackage` guide](guides/template-customization.md#rename-mypackage-your-first-customization). For example, `soil_analysis` is a clearer name than the starter name `mypackage`.
 2. Create the environment if you want to use the provided Conda and Make workflow:
 
    ```bash
@@ -59,10 +59,10 @@ Use this README as your home base. Open another document only when it matches yo
 
 | If you want to… | Go to… |
 |---|---|
-| Rename the starter package, understand a file, or decide whether to remove one | [Template File Guide](TEMPLATE_FILE_GUIDE.md) |
+| Rename the starter package, understand a file, or decide whether to remove one | [Template Customization Guide](guides/template-customization.md) |
 | Write your first function and test | [What to Edit First](#what-to-edit-first) below |
 | Learn about or enable a tool | [Tool Overview](#tool-overview) below |
-| Use AI responsibly with code or research materials | [Research Software AI Policy](RESEARCH_SOFTWARE_AI_POLICY.md) |
+| Use AI responsibly with code or research materials | [Research Software AI Policy](guides/ai-policy.md) |
 | Share work through GitHub or pull requests | [Sharing Changes](#sharing-changes-optional) below |
 | Publish API documentation | [API Docs Quick Start](#api-docs-quick-start-pdoc) below |
 
@@ -70,7 +70,7 @@ The AI configuration files (`AGENTS.md`, `.cursorrules`, `CLAUDE.md`, `GEMINI.md
 
 ## What to Edit First
 
-1. Follow the [rename `mypackage` guide](TEMPLATE_FILE_GUIDE.md#rename-mypackage-your-first-customization) to choose and configure your project package name.
+1. Follow the [rename `mypackage` guide](guides/template-customization.md#rename-mypackage-your-first-customization) to choose and configure your project package name.
 2. Replace [mypackage/example.py](mypackage/example.py) with your own module(s).
 3. Update tests in [mypackage/tests/test_pytest.py](mypackage/tests/test_pytest.py).
 4. Update this README with project goals, install instructions, and examples.
@@ -146,7 +146,7 @@ Docstring features already demonstrated in [mypackage/example.py](mypackage/exam
 
 Publishing tutorial:
 
-- [GITHUB_PAGES_TUTORIAL.md](GITHUB_PAGES_TUTORIAL.md)
+- [GitHub Pages tutorial](guides/github-pages.md)
 - Automated workflow: [.github/workflows/pages.yml](.github/workflows/pages.yml)
 - pdoc docs: https://pdoc.dev/docs/pdoc.html
 - GitHub Pages docs: https://docs.github.com/pages/getting-started-with-github-pages/creating-a-github-pages-site

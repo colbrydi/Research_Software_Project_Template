@@ -1,6 +1,6 @@
 # Template File Guide
 
-Start with [README.md](README.md). Use this guide only when you are customizing the template, wondering what a file does, or deciding whether to remove one.
+Start with [README.md](../README.md). Use this guide only when you are customizing the template, wondering what a file does, or deciding whether to remove one.
 
 Decision labels:
 - Keep: recommended for most student projects.
@@ -25,7 +25,7 @@ Decision labels:
 
 | File | Why it exists | Can you delete it? |
 |---|---|---|
-| RESEARCH_SOFTWARE_AI_POLICY.md | Canonical AI policy and quality principles. | Keep |
+| guides/ai-policy.md | Canonical AI policy and quality principles. | Keep |
 | AGENTS.md | Agent execution behavior tied to this repository. | Keep if using coding agents |
 | AI_GUIDELINES.md | Backward-compatibility stub for older links/tools. | Optional |
 | .github/copilot-instructions.md | GitHub Copilot-specific adapter file in expected location. | Keep if using Copilot |
@@ -56,7 +56,7 @@ If your class wants the smallest practical setup, keep these and remove the rest
 - LICENSE (modify if needed)
 - mypackage/ (rename and modify)
 - mypackage/tests/ (modify)
-- RESEARCH_SOFTWARE_AI_POLICY.md
+- guides/ai-policy.md
 - AGENTS.md
 - .github/copilot-instructions.md (if using Copilot)
 - .github/workflows/ci.yml (if using GitHub)
@@ -81,9 +81,9 @@ For example, if you rename `mypackage` to `soil_analysis`, make these matching c
    ```
 
    In this template, check the test file and `00_START_HERE.ipynb` if you keep the notebook.
-3. In [pyproject.toml](pyproject.toml), change `testpaths = ["mypackage/tests"]` to `testpaths = ["soil_analysis/tests"]`. This tells pytest where to look for your tests when it is run without a path.
-4. If you use the optional [makefile](makefile), change `MODULENAME ?= mypackage` to `MODULENAME ?= soil_analysis`. `MODULENAME` is just a variable: it tells commands such as `make test`, `make lint`, and `make docs` which code folder they should use.
-5. If you keep GitHub Pages documentation, change `mypackage` in [.github/workflows/pages.yml](.github/workflows/pages.yml) to `soil_analysis`. This tells pdoc which package to turn into documentation.
+3. In [pyproject.toml](../pyproject.toml), change `testpaths = ["mypackage/tests"]` to `testpaths = ["soil_analysis/tests"]`. This tells pytest where to look for your tests when it is run without a path.
+4. If you use the optional [makefile](../makefile), change `MODULENAME ?= mypackage` to `MODULENAME ?= soil_analysis`. `MODULENAME` is just a variable: it tells commands such as `make test`, `make lint`, and `make docs` which code folder they should use.
+5. If you keep GitHub Pages documentation, change `mypackage` in [.github/workflows/pages.yml](../.github/workflows/pages.yml) to `soil_analysis`. This tells pdoc which package to turn into documentation.
 6. Search the repository for `mypackage` and replace any remaining student-facing examples, such as README text or notebook starter-file checks.
 
 Why update all of these? If the folder and imports disagree, Python cannot find your code. If a configuration file still uses the old name, a tool may test, format, or document the wrong location.

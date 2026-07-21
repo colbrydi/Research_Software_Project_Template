@@ -6,11 +6,11 @@ Can I delete this?
 - Keep if you use coding agents.
 - If removed, preserve equivalent workflow guidance in another clearly discoverable file.
 
-Canonical philosophy, policy, and governance live in `RESEARCH_SOFTWARE_AI_POLICY.md`.
+Canonical philosophy, policy, and governance live in `guides/ai-policy.md`.
 
 ## Defaults
 
-1. Follow `RESEARCH_SOFTWARE_AI_POLICY.md`.
+1. Follow `guides/ai-policy.md`.
 2. Prefer existing project tooling and conventions.
 3. Keep changes minimal, testable, and maintainable.
 4. Improve contributor understanding while preserving productivity.
@@ -41,6 +41,6 @@ For non-trivial work:
 
 ## Ownership
 
-- Update `RESEARCH_SOFTWARE_AI_POLICY.md` for philosophy or policy changes.
+- Update `guides/ai-policy.md` for philosophy or policy changes.
 - Update `AGENTS.md` for operational workflow changes.
 - Update `.github/copilot-instructions.md` only for GitHub-specific adapter behavior.
