@@ -61,16 +61,35 @@ If your class wants the smallest practical setup, keep these and remove the rest
 - .github/copilot-instructions.md (if using Copilot)
 - .github/workflows/ci.yml (if using GitHub)
 
+## Rename `mypackage` (Your First Customization)
+
+In Python, a *package* is the folder that holds code you can import into a notebook, script, or test. The template calls this folder `mypackage` only as a placeholder. Choose a short, lowercase name that describes your project, such as `soil_analysis`.
+
+For example, if you rename `mypackage` to `soil_analysis`, make these matching changes:
+
+1. Rename the folder `mypackage/` to `soil_analysis/`. The `__init__.py` file stays inside that renamed folder; it tells Python to treat the folder as importable code.
+2. Change imports wherever they occur. For example, change:
+
+   ```python
+   from mypackage import power_self
+   ```
+
+   to:
+
+   ```python
+   from soil_analysis import power_self
+   ```
+
+   In this template, check the test file and `00_START_HERE.ipynb` if you keep the notebook.
+3. In [pyproject.toml](pyproject.toml), change `testpaths = ["mypackage/tests"]` to `testpaths = ["soil_analysis/tests"]`. This tells pytest where to look for your tests when it is run without a path.
+4. If you use the optional [makefile](makefile), change `MODULENAME ?= mypackage` to `MODULENAME ?= soil_analysis`. `MODULENAME` is just a variable: it tells commands such as `make test`, `make lint`, and `make docs` which code folder they should use.
+5. If you keep GitHub Pages documentation, change `mypackage` in [.github/workflows/pages.yml](.github/workflows/pages.yml) to `soil_analysis`. This tells pdoc which package to turn into documentation.
+6. Search the repository for `mypackage` and replace any remaining student-facing examples, such as README text or notebook starter-file checks.
+
+Why update all of these? If the folder and imports disagree, Python cannot find your code. If a configuration file still uses the old name, a tool may test, format, or document the wrong location.
+
+To check the rename, run `make test` if your project uses Make. Otherwise, from the repository root, start Python and try `import soil_analysis`. A successful import confirms that Python can find the renamed package.
+
 ## Pass-By-Default Automation Notes
 
-This template is set up so a fresh GitHub repository from template should pass CI without first-day debugging.
-
-To keep that true after project renaming/customization, update these references together:
-- package folder rename (`mypackage` -> your package name)
-- [makefile](makefile): `MODULENAME`
-- [pyproject.toml](pyproject.toml): `testpaths`
-- [.github/workflows/pages.yml](.github/workflows/pages.yml): `pdoc ... mypackage` (if pages workflow is kept)
-
-Recommended first validation after cloning/templating:
-- run `make init`
-- run `make test`
+This template is set up so a fresh GitHub repository from template should pass CI without first-day debugging. Updating the matching references above keeps that true after customization.

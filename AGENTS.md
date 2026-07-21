@@ -22,14 +22,16 @@ For non-trivial work:
 1. Clarify objective, constraints, and assumptions.
 2. Read relevant files before editing.
 3. Implement the smallest coherent change.
-4. Validate with relevant checks.
+4. Validate proportionately using enabled tools or a small manual check.
 5. Report what changed, why, and how it was verified.
 
 ## Validation
 
-- Use existing `make` targets where possible: `make test`, `make format`, `make lint`, `make type`, `make docs`, `make check-full`.
-- Add or update tests when behavior changes.
-- If validation cannot be run, state what was skipped and why.
+- Treat repository tools as optional unless the contributor or course has enabled them.
+- When tests or checks are in use, add or update the smallest relevant validation for meaningful behavior changes.
+- When they are not in use, suggest one small manual check the contributor can perform.
+- Use existing `make` targets when the project uses `make`: `make test`, `make format`, `make lint`, `make type`, `make docs`, `make check-full`.
+- If validation is skipped, state what was skipped and why.
 
 ## Repo Practices
 
